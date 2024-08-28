@@ -1,13 +1,10 @@
 // client-frontend/src/redux/store.js
-import { createStore, combineReducers } from "redux";
-import cartReducer from "./reducers/cartReducer";
-import wishlistReducer from "./reducers/wishlistReducer";
+import { createStore } from "redux";
+import rootReducer from "./reducers/rootReducer"; // Import rootReducer
 
-const rootReducer = combineReducers({
-  cart: cartReducer,
-  wishlist: wishlistReducer,
-});
-
-const store = createStore(rootReducer);
+const store = createStore(
+  rootReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 export default store;
