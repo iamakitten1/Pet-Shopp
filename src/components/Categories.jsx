@@ -37,7 +37,7 @@ function CategoriesList({ showForm }) {
             setCategories(json); // Set the fetched categories to state
             console.log(json);
         } catch (error) {
-            console.error(error.message);
+            console.error("Failed to fetch categories:", error.message);
         }
     }
 
@@ -45,11 +45,15 @@ function CategoriesList({ showForm }) {
         <>
             <h2 className="text-center mb-3">List of Categories</h2>
             <button onClick={showForm} type="button" className="btn btn-primary me-2">Create</button>
-            <ul>
-                {categories.map((category) => (
-                    <li key={category.id}>{category.name}</li>
-                ))}
-            </ul>
+            {categories.length === 0 ? (
+                <p>No categories available</p>
+            ) : (
+                <ul>
+                    {categories.map((category) => (
+                        <li key={category.id}>{category.name}</li>
+                    ))}
+                </ul>
+            )}
         </>
     );
 }
