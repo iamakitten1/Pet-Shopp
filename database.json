@@ -1,0 +1,167 @@
+
+{
+    "animals": [
+        {
+            "name": "Parrot",
+            "price": "1000",
+            "description": "The African gray parrot is unsurpassed as a talker.",
+            "isPopular": true,
+            "stock": 5,
+            "id": "1",
+            "category": "Bird"
+        },
+        {
+            "name": "Canary",
+            "price": "150",
+            "description": "A small, lively bird known for its singing ability.",
+            "isPopular": true,
+            "stock": 8,
+            "id": "2",
+            "category": "Bird"
+        },
+        {
+            "name": "Bearded Dragon",
+            "price": "250",
+            "description": "A friendly and easy-to-care-for reptile.",
+            "isPopular": true,
+            "stock": 3,
+            "id": "3",
+            "category": "Reptile"
+        },
+        {
+            "name": "Corn Snake",
+            "price": "100",
+            "description": "A docile and low-maintenance snake.",
+            "isPopular": true,
+            "stock": 6,
+            "id": "4",
+            "category": "Reptile"
+        },
+        {
+            "name": "Rabbit",
+            "price": "75",
+            "description": "A gentle and playful companion.",
+            "isPopular": true,
+            "stock": 10,
+            "id": "5",
+            "category": "Rabbit"
+        },
+        {
+            "name": "Siamese Cat",
+            "price": "500",
+            "description": "A vocal and affectionate cat breed.",
+            "isPopular": true,
+            "stock": 4,
+            "id": "6",
+            "category": "Cat"
+        },
+        {
+            "name": "Persian Cat",
+            "price": "600",
+            "description": "A long-haired breed known for its calm demeanor.",
+            "isPopular": true,
+            "stock": 3,
+            "id": "7",
+            "category": "Cat"
+        },
+        {
+            "name": "Goldfish",
+            "price": "20",
+            "description": "A popular and low-maintenance fish.",
+            "isPopular": true,
+            "stock": 20,
+            "id": "8",
+            "category": "Fish"
+        },
+        {
+            "name": "Betta Fish",
+            "price": "30",
+            "description": "A vibrant fish known for its flowing fins.",
+            "isPopular": true,
+            "stock": 15,
+            "id": "9",
+            "category": "Fish"
+        },
+        {
+            "name": "Labrador Retriever",
+            "price": "800",
+            "description": "A friendly and energetic dog breed.",
+            "isPopular": true,
+            "stock": 2,
+            "id": "10",
+            "category": "Dog"
+        },
+        {
+            "name": "Poodle",
+            "price": "700",
+            "description": "An intelligent and hypoallergenic dog breed.",
+            "isPopular": true,
+            "stock": 3,
+            "id": "11",
+            "category": "Dog"
+        }
+    ],
+
+    "categories": {
+        "Bird": [
+            {
+                "name": "Parrot",
+                "id": "1"
+            },
+            {
+                "name": "Canary",
+                "id": "2"
+            }
+        ],
+        "Reptile": [
+            {
+                "name": "Bearded Dragon",
+                "id": "3"
+            },
+            {
+                "name": "Corn Snake",
+                "id": "4"
+            }
+        ],
+        "Rabbit": [
+            {
+                "name": "Rabbit",
+                "id": "5"
+            }
+        ],
+        "Cat": [
+            {
+                "name": "Siamese Cat",
+                "id": "6"
+            },
+            {
+                "name": "Persian Cat",
+                "id": "7"
+            }
+        ],
+        "Fish": [
+            {
+                "name": "Goldfish",
+                "id": "8"
+            },
+            {
+                "name": "Betta Fish",
+                "id": "9"
+            }
+        ],
+        "Dog": [
+            {
+                "name": "Labrador Retriever",
+                "id": "10"
+            },
+            {
+                "name": "Poodle",
+                "id": "11"
+            }
+        ]
+    }
+}
+
+
+
+
