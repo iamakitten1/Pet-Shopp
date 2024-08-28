@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 
+// Main Categories Component
 export function Categories() {
   const [content, setContent] = useState(<CategoriesList showForm={showForm} />);
 
@@ -18,6 +19,7 @@ export function Categories() {
   );
 }
 
+// List Component for Categories
 function CategoriesList({ showForm }) {
   const [categories, setCategories] = useState([]);
 
@@ -26,18 +28,14 @@ function CategoriesList({ showForm }) {
   }, []);
 
   async function fetchCategories() {
-    const url = "https://crudapi.co.uk/api/v1/categories"; // Replace with the correct CRUD API endpoint
+    const url = "http://localhost:3000/categories";
     try {
-      const response = await fetch(url, {
-        headers: {
-          'Authorization': 'Apfi93S9KlnsK0M8Yoac77sjpSdNUnytK6wNLLz2-2prWnVtRA', // Replace with your actual API key
-        }
-      });
+      const response = await fetch(url);
       if (!response.ok) {
         throw new Error(`Response status: ${response.status}`);
       }
       const json = await response.json();
-      setCategories(json); // Update the state with fetched categories
+      setCategories(json);
     } catch (error) {
       console.error("Failed to fetch categories:", error.message);
     }
@@ -60,6 +58,7 @@ function CategoriesList({ showForm }) {
   );
 }
 
+// Form Component for Adding New Categories
 function CategoriesForm({ showList }) {
   return (
     <>

@@ -1,4 +1,4 @@
-// client-frontend
+
 
 import React from "react";
 import ReactDOM from "react-dom/client";
@@ -10,6 +10,7 @@ import { AnimalList } from "./components/AnimalList";
 import { AnimalDetails } from "./components/AnimalDetails";
 import { Cart } from "./components/Cart";
 import { Wishlist } from "./components/Wishlist";
+import { Categories } from "./components/Categories";
 const root =ReactDOM.createRoot(document.getElementById("root"));
 
  
@@ -22,6 +23,7 @@ const root =ReactDOM.createRoot(document.getElementById("root"));
     <Route path="/animals/:id" element={<AnimalDetails />} />
     <Route path="/cart" element={<Cart />} />
     <Route path="/wishlist" element={<Wishlist />} />
+    <Route path="/categories" element={<Categories />} />
     
   </Routes>
   <Footer />
