@@ -40,11 +40,51 @@ function CategoriesList({ showForm }) {
       console.error("Failed to fetch categories:", error.message);
     }
   }
-
+ //fetchProducts
+  useEffect(() => fetchCategories(), []);
   return (
     <>
       <h2 className="text-center mb-3">List of Categories</h2>
       <button onClick={showForm} type="button" className="btn btn-primary me-2">Create</button>
+      <table className="table">
+         <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Is Popular</th>
+                <th>Stock</th>
+                <th>Category</th>
+                <th>Action</th>
+            </tr>
+         </thead>
+         <tbody>
+            {categories.map((categories, index) =>{
+                return (
+                    <tr key={index}>
+                    <td>{categories.name}</td>
+                    <td>{categories.price}</td>
+                    <td>{categories.description}</td>
+                    <td>{categories.isPopula}</td>
+                    <td>{categories.stock}</td>
+                    <td>{categories.id}</td>
+                    <td>{categories.category}</td>
+
+                    <td style={{width: "10px", whiteSpace: "nowrap"}}>
+                        <button type="button" className="'btn btn-primary btn-sm me-2">  Edit   </button>
+                        <button type="button" className="'btn btn-danger btn-sm me-2"> Delete </button>  
+
+                    </td>
+                    </tr>
+
+                );
+
+            })
+            }
+         </tbody>
+
+      </table>
       {categories.length === 0 ? (
         <p>No categories available</p>
       ) : (
@@ -53,6 +93,7 @@ function CategoriesList({ showForm }) {
             <li key={category.id}>{category.name}</li>
           ))}
         </ul>
+        
       )}
     </>
   );
