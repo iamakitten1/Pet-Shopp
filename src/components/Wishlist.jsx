@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+// import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { removeFromWishlist } from "../redux/actions/wishlistActions"; // Assume this action is defined in your Redux actions
 
